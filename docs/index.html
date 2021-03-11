@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    
+  <script>
+    
+      //  function doHomework(foo){
+      //      alert('Start');
+   //
+       //     foo();
+       // }
+
+       // function alertFinished() {
+       //     alert('Finished my homework');
+       //  }
+        // function alertStart() {
+          //   alert('Started my homework');
+        // }
+        // doHomework(alertFinished);
+        // doHomework(alertStart);
+//test 2
+const pet = function(name) {
+    const getName = function() {
+        return name;
+    }
+    return getName ;
+
+}
+let myPet = pet('Vivie') ;
+myPet();
+
+// task 3
+const rgb = (a, b, c) => {
+ //if (typeof c === 'undefined') {
+ //    c = 0
+ //}
+ //if (typeof b === 'undefined') {
+ //    b = 0
+ //}
+ //if ( typeof a === 'undefined') {
+ //    a = 0
+ //}
+// a = a || 0
+a = typeof a === 'number' ? a : 0
+ b = b || 0
+ c = c || 0
+  return `rgb(${a}, ${b}, ${c})`
+}
+
+console.log(rgb());
+console.log(rgb(1,2));
+console.log(rgb(1,2,3));
+console.log(rgb(1));
+//task 1
+
+let mul = function (n, m) {
+    return n * m;
+}
+console.log(mul(2, 5));
+
+// task 2 
+let repeat = function(str, n = 2) {
+    return  str.repeat(n);
+} 
+
+console.log(repeat('add'));
+//task 5
+
+const addN = (n) => {
+// return function(x){
+return (x) => {
+    return x + n
+ }
+}
+const addTen = addN(10)
+console.log(addTen(5) === 15);
+
+const addFive = addN(5)
+console.log(addFive(25) === 30);
+
+// task 7
+
+function fib(n) {
+    let a = 0;
+    let b = 1;
+    for (let i = 0; i <= n; i++) {
+        let c =  b;
+        b = b + a;
+        a = c;
+    }
+    return a;
+}
+console.log(fib(2));
+    </script>
+   <script src="./js/main.js"></script> 
+</body>
+</html>
