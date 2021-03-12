@@ -20,7 +20,7 @@ let fullSurname = prompt("Напишите фамилию",'');
 let age = parseInt(prompt('Введите Ваш возраст:', ''));
 
     
-	while ((Number.isNaN(age)) || age >= 150 || age <= 0) {
+	while (Number.isNaN(age) || age >= 150 || age <= 0) {
 		age = parseInt(prompt("Пишите правильный возраст в цифрах", ));
 
 	}
